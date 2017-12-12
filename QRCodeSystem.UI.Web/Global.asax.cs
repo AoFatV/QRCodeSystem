@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Security;
-using System.Web.SessionState;
+using System.Web.Optimization;
 
 namespace QRCodeSystem.UI.Web
 {
@@ -11,6 +7,15 @@ namespace QRCodeSystem.UI.Web
     {
         protected void Application_Start(object sender, EventArgs e)
         {
+            BundleTable.Bundles.Add(new StyleBundle("~/content/adminlte").IncludeDirectory("~/admin-lte/css", "*.min.css"));
+
+            BundleTable.Bundles.Add(new StyleBundle("~/content/css").IncludeDirectory("~/content", "*.min.css"));
+
+            BundleTable.Bundles.Add(new ScriptBundle("~/scripts/adminlte").Include(
+                "~/Scripts/jquery-3.1.1.min.js","~/admin-lte/js/adminlte.min.js"
+                ));
+
+            BundleTable.EnableOptimizations = true;
         }
     }
 }

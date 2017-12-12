@@ -9,12 +9,12 @@ namespace QRCodeSystem.DataAccess
     public class DBHelper : BaseClasses.DbDAL
     {
         public string _ConnString;
-        DbConnection Connection;
-        DbCommand Command;
-        DbTransaction Transaction;
-        SqlDataAdapter da;
-        SqlDatabase db;
-        int timeOut = 3600;
+        public DbConnection Connection;
+        public DbCommand Command;
+        public DbTransaction Transaction;
+        public SqlDataAdapter da;
+        public SqlDatabase db;
+        public int timeOut = 3600;
 
         public DBHelper()
         {

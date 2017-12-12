@@ -18,7 +18,7 @@ namespace QRCodeSystem.UI.Web
             {
                 BLRoles roles = new BLRoles();
 
-                //DataSet ds = roles.GetRoles("123");
+                DataSet ds = roles.GetRoles("123");
             }
             catch (Exception ex)
             {
